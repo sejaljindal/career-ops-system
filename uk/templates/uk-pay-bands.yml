@@ -1,0 +1,119 @@
+# UK published pay structures -> actual figures
+#
+# WHY THIS FILE EXISTS. UK public-sector adverts rarely print a salary; they
+# print a band ("Band 6", "HEO", "Grade 7", "SCP 28"). Without a lookup every
+# one of those roles resolves to UNKNOWN, which disables the Skilled Worker
+# salary test entirely — the single most important filter in this pipeline.
+#
+# RULE: where a band maps to a range, ALWAYS take the BOTTOM of the band.
+# Eligibility is decided by the salary actually guaranteed on day one, not by
+# the top of a scale reached after five years of increments.
+#
+# Every figure resolved from this file is tagged source: BAND_LOOKUP so a
+# derived salary is never mistaken for an advertised one.
+#
+# `confidence` is honest, not decorative:
+#   high   — nationally set, published scale, figure verified against source
+#   medium — nationally framed but varies by employer/department
+#   low    — indicative only; verify before relying on it for an application
+#
+# Staleness: `as_of` is read by check-table-freshness.mjs. UK pay awards land
+# annually (NHS/NJC in April, Civil Service in summer), so anything older than
+# about 12 months should be re-verified before use.
+
+as_of: "2026-08-13"
+
+structures:
+
+  # ── NHS Agenda for Change ──────────────────────────────────────────
+  # England/Wales/NI, effective 1 April 2026 (3.3% uplift).
+  # Source: NHS Employers 2026 AfC pay scales.
+  nhs_afc:
+    label: NHS Agenda for Change
+    as_of: "2026-04-01"
+    confidence: high
+    source: "https://www.nhsemployers.org/articles/pay-scales-202627"
+    note: "Bottom-of-band entry points. Scotland runs a separate scale — not covered here."
+    bands:
+      "2": 24169
+      "3": 25674
+      "4": 27596
+      "5": 32073
+      "6": 39959
+      "7": 49387
+      "8a": 57528
+      "8b": 66618
+      "8c": 79294
+      "8d": 95275
+      "9": 112060
+    # High Cost Area Supplement, added on top of the band entry point.
+    # Inner London 20% (min £5,414 max £8,172); Outer 15%; Fringe 5%.
+    hcas:
+      inner_london: { pct: 0.20, min: 5414, max: 8172 }
+      outer_london: { pct: 0.15, min: 4551, max: 5735 }
+      fringe:       { pct: 0.05, min: 1364, max: 2373 }
+
+  # ── Civil Service ──────────────────────────────────────────────────
+  # Grades are national; PAY IS SET DEPARTMENTALLY and varies widely. These are
+  # the BOTTOM of the commonly published national/London ranges, which is the
+  # conservative choice for an eligibility test.
+  civil_service:
+    label: Civil Service grades
+    as_of: "2026-01-01"
+    confidence: medium
+    source: "https://www.salaryscout.co.uk/insights/guides/civil-service-salary-grades-2026"
+    note: >
+      Departmental variation is large — a Grade 7 at HM Treasury sits near the top
+      of the band while DWP/HMRC sit near the bottom. Figures are band minimums.
+      AO/EO/SEO are indicative; HEO, Grade 7 and Grade 6 are the better-evidenced.
+    grades:
+      AO:      { national: 25000, london: 27500, confidence: low }
+      EO:      { national: 28000, london: 32000, confidence: low }
+      HEO:     { national: 34000, london: 38500, confidence: medium }
+      SEO:     { national: 42000, london: 47000, confidence: low }
+      "Grade 7": { national: 55000, london: 61000, confidence: medium }
+      "Grade 6": { national: 70000, london: 76000, confidence: medium }
+
+  # ── Higher education ───────────────────────────────────────────────
+  # The national single pay spine is negotiated by UCEA, but each institution
+  # maps its own grades onto it, so grade->salary is only ever approximate.
+  university:
+    label: University grades (UCEA single pay spine)
+    as_of: "2026-08-01"
+    confidence: low
+    source: "https://www.ucea.ac.uk/"
+    note: >
+      Grade numbering is NOT standard across institutions — one university's
+      Grade 6 is another's Grade 5. Treat as indicative and verify against the
+      specific institution's published scale before relying on it.
+    grades:
+      "Grade 5": 28500
+      "Grade 6": 33500
+      "Grade 7": 40500
+      "Grade 8": 49500
+      "Grade 9": 59000
+
+  # ── Local government (NJC) ─────────────────────────────────────────
+  # National Joint Council spinal column points, England/Wales/NI.
+  local_government_njc:
+    label: Local government NJC scale points
+    as_of: "2026-04-01"
+    confidence: medium
+    source: "https://www.local.gov.uk/pay-and-conditions"
+    note: "Spinal column point -> annual FTE. London boroughs add their own weighting on top."
+    scp:
+      2: 25183
+      5: 26409
+      8: 27711
+      11: 29093
+      14: 31067
+      17: 33366
+      20: 35235
+      23: 37938
+      26: 40476
+      29: 43693
+      32: 46731
+      35: 49764
+      38: 52805
+      41: 56708
+      43: 59712

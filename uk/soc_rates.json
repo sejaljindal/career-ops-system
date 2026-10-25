@@ -1,0 +1,83 @@
+{
+  "_meta": {
+    "source": "GOV.UK Skilled Worker visa: going rates for eligible occupation codes, updated 22 July 2025",
+    "general_threshold_experienced": 41700,
+    "general_threshold_new_entrant": 30960,
+    "new_entrant_going_rate_discount": 0.70,
+    "new_entrant_deadline": "2027-02-22",
+    "new_entrant_deadline_note": "the candidate turns 26 on 2027-02-23. New entrant status is assessed on age at the DATE THE VISA APPLICATION IS SUBMITTED, not the offer date.",
+    "rqf6_rule": "Since 2025-07-22 new Skilled Worker applications must be RQF Level 6 or above. In practice this means SOC codes beginning 1 or 2. Codes beginning 3, 4 or 5 are NOT available to a first-time applicant.",
+    "floor_formula": "new_entrant_floor = MAX(30960, 0.70 * going_rate); experienced_floor = MAX(41700, going_rate)"
+  },
+
+  "eligible": {
+    "2431": {"title": "Management consultants and business analysts", "covers": ["business analyst", "business consultant", "management consultant", "management adviser", "risk analyst", "consulting analyst", "associate consultant", "strategy consultant", "transformation consultant"], "going_rate": 50200, "new_entrant_floor": 35140, "experienced_floor": 50200, "priority": 1},
+    "2440": {"title": "Business and financial project management professionals", "covers": ["business change manager", "change analyst", "risk manager", "transformation manager", "business change analyst"], "going_rate": 56500, "new_entrant_floor": 39550, "experienced_floor": 56500, "priority": 1},
+    "2439": {"title": "Business, research and administrative professionals nec", "covers": ["policy officer", "policy analyst", "policy adviser"], "going_rate": 56600, "new_entrant_floor": 39620, "experienced_floor": 56600, "priority": 2},
+    "2434": {"title": "Business and related research professionals", "covers": ["intelligence analyst", "researcher in media and entertainment", "research analyst", "insight analyst"], "going_rate": 38800, "new_entrant_floor": 30960, "experienced_floor": 41700, "priority": 1, "note": "LOWEST FLOOR of the core codes. Route into music, events and creative employers."},
+    "2422": {"title": "Finance and investment analysts and advisers", "covers": ["financial analyst", "credit analyst", "investment analyst", "finance analyst"], "going_rate": 45800, "new_entrant_floor": 32060, "experienced_floor": 45800, "priority": 1},
+    "2421": {"title": "Chartered and certified accountants", "covers": ["financial accountant", "auditor", "fund accountant"], "going_rate": 49200, "new_entrant_floor": 34440, "experienced_floor": 49200, "priority": 3},
+    "2433": {"title": "Actuaries, economists and statisticians", "covers": ["economist", "statistician", "statistical data scientist"], "going_rate": 55100, "new_entrant_floor": 38570, "experienced_floor": 55100, "priority": 3},
+    "2432": {"title": "Marketing and commercial managers", "covers": ["commercial manager", "commercial analyst", "marketing manager"], "going_rate": 50100, "new_entrant_floor": 35070, "experienced_floor": 50100, "priority": 1, "note": "Route into luxury, fashion, retail and consumer."},
+    "2133": {"title": "IT business analysts, architects and systems designers", "covers": ["it business analyst", "data architect", "systems analyst", "technical business analyst"], "going_rate": 54900, "new_entrant_floor": 38430, "experienced_floor": 54900, "priority": 2},
+    "2131": {"title": "IT project managers", "covers": ["it project manager", "digital project manager"], "going_rate": 58200, "new_entrant_floor": 40740, "experienced_floor": 58200, "priority": 3},
+    "2132": {"title": "IT managers", "covers": ["it product manager", "it service delivery manager", "it test manager"], "going_rate": 55000, "new_entrant_floor": 38500, "experienced_floor": 55000, "priority": 3},
+    "2139": {"title": "Information technology professionals nec", "covers": ["it consultant", "technology consultant", "digital consultant"], "going_rate": 52300, "new_entrant_floor": 36610, "experienced_floor": 52300, "priority": 2},
+    "2482": {"title": "Quality assurance and regulatory professionals", "covers": ["compliance professional", "regulatory professional", "quality assurance professional", "compliance analyst"], "going_rate": 48200, "new_entrant_floor": 33740, "experienced_floor": 48200, "priority": 2},
+    "2455": {"title": "Construction project managers and related professionals", "covers": ["construction project manager", "contract manager", "transport planner"], "going_rate": 44300, "new_entrant_floor": 31010, "experienced_floor": 44300, "priority": 2},
+    "2453": {"title": "Quantity surveyors", "covers": ["quantity surveyor", "cost consultant", "cost manager"], "going_rate": 48600, "new_entrant_floor": 34020, "experienced_floor": 48600, "priority": 3},
+    "2454": {"title": "Chartered surveyors", "covers": ["property surveyor", "building control surveyor", "land surveyor"], "going_rate": 43800, "new_entrant_floor": 30960, "experienced_floor": 43800, "priority": 3},
+    "2452": {"title": "Chartered architectural technologists, planning officers and consultants", "covers": ["town planning officer", "urban designer", "planning consultant"], "going_rate": 35800, "new_entrant_floor": 30960, "experienced_floor": 41700, "priority": 3},
+    "2162": {"title": "Other researchers, unspecified discipline", "covers": ["researcher", "research associate"], "going_rate": 43600, "new_entrant_floor": 30960, "experienced_floor": 43600, "priority": 2},
+    "2329": {"title": "Other educational professionals nec", "covers": ["bursar", "educational administrator", "examiner"], "going_rate": 40600, "new_entrant_floor": 30960, "experienced_floor": 41700, "priority": 1, "note": "LOW FLOOR. University professional services route."},
+    "2322": {"title": "Education managers", "covers": ["education manager"], "going_rate": 43900, "new_entrant_floor": 30960, "experienced_floor": 43900, "priority": 2},
+    "2323": {"title": "Education advisers and school inspectors", "covers": ["educational adviser"], "going_rate": 42200, "new_entrant_floor": 30960, "experienced_floor": 42200, "priority": 3},
+    "2311": {"title": "Higher education teaching professionals", "covers": ["lecturer", "higher education teaching"], "going_rate": 52600, "new_entrant_floor": 36820, "experienced_floor": 52600, "priority": 4},
+    "2115": {"title": "Social and humanities scientists", "covers": ["public health analyst", "gis analyst", "behavioural scientist", "epidemiologist"], "going_rate": 40400, "new_entrant_floor": 30960, "experienced_floor": 41700, "priority": 1, "note": "LOW FLOOR. NHS and public health analytics route."},
+    "2119": {"title": "Natural and social science professionals nec", "covers": ["sports scientist"], "going_rate": 41500, "new_entrant_floor": 30960, "experienced_floor": 41700, "priority": 4},
+    "1171": {"title": "Health services and public health managers and directors", "covers": ["healthcare service manager", "clinical governance manager", "health services manager"], "going_rate": 50300, "new_entrant_floor": 35210, "experienced_floor": 50300, "priority": 2, "note": "NHS route. NHS uses national pay scales - verify manually."},
+    "1172": {"title": "Social services managers and directors", "covers": ["social services manager"], "going_rate": 43000, "new_entrant_floor": 30960, "experienced_floor": 43000, "priority": 4},
+    "1135": {"title": "Charitable organisation managers and directors", "covers": ["charity manager", "charitable organisation manager"], "going_rate": 44300, "new_entrant_floor": 31010, "experienced_floor": 44300, "priority": 2, "note": "Charity and non-profit route."},
+    "1255": {"title": "Managers and directors in the creative industries", "covers": ["production manager", "publishing manager", "art gallery manager", "theatre production manager", "radio production manager"], "going_rate": 44900, "new_entrant_floor": 31430, "experienced_floor": 44900, "priority": 2, "note": "Music, events, media and creative route."},
+    "1259": {"title": "Managers and proprietors in other services nec", "covers": ["library manager", "educational establishment manager", "security services manager"], "going_rate": 41400, "new_entrant_floor": 30960, "experienced_floor": 41700, "priority": 2, "note": "LOW FLOOR. University and institutional route."},
+    "1251": {"title": "Property, housing and estate managers", "covers": ["facilities manager", "property manager", "estates manager", "shopping centre manager"], "going_rate": 42600, "new_entrant_floor": 30960, "experienced_floor": 42600, "priority": 3},
+    "1134": {"title": "Purchasing managers and directors", "covers": ["procurement manager", "purchasing manager", "estimating manager"], "going_rate": 54700, "new_entrant_floor": 38290, "experienced_floor": 54700, "priority": 3},
+    "1136": {"title": "Human resource managers and directors", "covers": ["hr manager", "learning and development manager", "recruitment manager"], "going_rate": 52900, "new_entrant_floor": 37030, "experienced_floor": 52900, "priority": 4},
+    "1258": {"title": "Directors in consultancy services", "covers": ["management consultancy director", "environmental consultancy director"], "going_rate": 70100, "new_entrant_floor": 49070, "experienced_floor": 70100, "priority": 4, "note": "Too senior for now. Listed for completeness."},
+    "1241": {"title": "Managers in transport and distribution", "covers": ["depot manager", "fleet manager", "road traffic manager", "airport manager"], "going_rate": 44900, "new_entrant_floor": 31430, "experienced_floor": 44900, "priority": 3},
+    "1243": {"title": "Managers in logistics", "covers": ["logistics manager"], "going_rate": 44900, "new_entrant_floor": 31430, "experienced_floor": 44900, "priority": 3},
+    "2127": {"title": "Engineering project managers and project engineers", "covers": ["engineering project manager"], "going_rate": 51900, "new_entrant_floor": 36330, "experienced_floor": 51900, "priority": 4},
+    "2494": {"title": "Advertising accounts managers and creative directors", "covers": ["advertising account manager", "fundraising manager"], "going_rate": 46000, "new_entrant_floor": 32200, "experienced_floor": 46000, "priority": 3},
+    "2493": {"title": "Public relations professionals", "covers": ["press officer", "public relations officer", "social media manager"], "going_rate": 37000, "new_entrant_floor": 30960, "experienced_floor": 41700, "priority": 4}
+  },
+
+  "ineligible_below_rqf6": {
+    "_note": "These codes appear in the GOV.UK table but their lower rate applies ONLY to people who held a Certificate of Sponsorship before 2024-04-04. the candidate is a first-time applicant, so these are CLOSED to her. Flag any role matching these as NOT ELIGIBLE.",
+    "3543": {"title": "Project support officers", "covers": ["project support officer", "pmo analyst", "project support", "pmo officer", "project administrator"], "going_rate": 33900},
+    "3544": {"title": "Data analysts", "covers": ["data analyst"], "going_rate": 34900},
+    "3549": {"title": "Business associate professionals nec", "covers": ["business support officer", "business systems analyst", "contract administrator", "research coordinator"], "going_rate": 33400},
+    "3557": {"title": "Events managers and organisers", "covers": ["events manager", "conference manager", "exhibition manager", "festival manager"], "going_rate": 33400},
+    "3533": {"title": "Financial and accounting technicians", "covers": ["accounting technician", "financial control technician"], "going_rate": 48700},
+    "3534": {"title": "Financial accounts managers", "covers": ["claims manager", "credit manager", "relationship manager"], "going_rate": 44700},
+    "3551": {"title": "Buyers and procurement officers", "covers": ["buyer", "procurement officer"], "going_rate": 35500},
+    "3556": {"title": "Sales accounts and business development managers", "covers": ["business development manager", "brand manager", "sales account manager"], "going_rate": 55200},
+    "3560": {"title": "Public services associate professionals", "covers": ["health service administrator", "electoral services officer"], "going_rate": 39500},
+    "3571": {"title": "Human resources and industrial relations officers", "covers": ["hr adviser", "recruitment consultant"], "going_rate": 33400},
+    "3582": {"title": "Health and safety managers and officers", "covers": ["health and safety officer"], "going_rate": 42500},
+    "4112": {"title": "Local government administrative occupations", "covers": ["local government officer", "parish clerk"], "going_rate": 33400},
+    "4141": {"title": "Office managers", "covers": ["office manager"], "going_rate": 37400},
+    "4159": {"title": "Other administrative occupations nec", "covers": ["business administrator", "facilities coordinator"], "going_rate": 33400}
+  },
+
+  "language_signals": {
+    "_note": "Same person, same work. The verbs decide the code. Rank roles using ANALYSIS language above roles using SUPPORT language even when job titles are identical.",
+    "pushes_toward_2431_eligible": ["analyse", "analysis", "advisory", "advise", "recommend", "recommendation", "insight", "assessment", "evaluate", "strategy", "diagnose", "decision support", "business case", "options appraisal", "consult", "review and challenge"],
+    "pushes_toward_3543_ineligible": ["support", "coordinate", "coordination", "administer", "administration", "organise", "maintain", "assist", "arrange", "schedule", "minute", "collate", "log", "track and update", "diary management"]
+  },
+
+  "remote_classification": {
+    "global_no_visa_needed": ["work from anywhere", "fully distributed", "any timezone", "employer of record", "hire globally", "location independent", "work from any country"],
+    "uk_only_visa_still_required": ["remote uk", "uk based", "must reside in the uk", "uk remote", "home based uk"],
+    "other_country_reject": ["us only", "usa only", "eu residents", "must be based in", "canada only", "australia only"]
+  }
+}

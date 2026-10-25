@@ -1,0 +1,16 @@
+# never commit personal data
+.env
+**/.env
+**/cv.md
+**/config/profile.yml
+**/config/local-paths.txt
+**/data/
+**/output/
+**/reports/
+**/jds/
+**/interview-prep/
+**/writing-samples/
+**/node_modules/
+Applications/
+*.xlsx
+!tracker/Saved_Roles_TEMPLATE.xlsx
